@@ -1,0 +1,70 @@
+
+body{
+    background-color: bisque;
+    }
+
+ ul, li, a {
+    margin: 10px;
+    padding: 0;
+    display:inline-block;
+    color: pink;
+    text-decoration: none;
+     }
+
+nav {
+    background-color: grey;
+     }
+
+.main_content{
+    margin-left: 50px;
+}
+
+.geeks {
+    font-size: 25px;
+    margin-left: 30px;
+}
+
+#geeks1 {
+    height: 200px;
+    width: 100px;
+    background: blue;
+    display: inline-block;
+}
+
+#geeks2 {
+    height: 200px;
+    width: 100px;
+    background: white;
+    display: inline-block;
+}
+
+#geeks3 {
+    height: 200px;
+    width: 100px;
+    background: red;
+    display: inline-block;
+}
+
+.parent {
+    width:70vw;
+    height:80vh;
+    border:2px solid black;
+    position:relative;
+    left: 100px;
+}
+.parent div {
+    width:20vw;
+    height:20vh;
+}
+
+.one{
+    background-color: blue;
+}
+
+.two{
+    background-color: white;
+}
+
+.three{
+    background-color: red;
+}

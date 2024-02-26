@@ -1,0 +1,62 @@
+body{
+    background-image:url(pexels-kellie-churchman-1001682.jpg);
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+nav{
+    display:flex;
+    justify-content:space-around ;
+    background-color: lightgray;
+
+}
+
+#bootstrap{
+    margin-left: 0;
+}
+
+button{
+    color:white;
+    background-color: blue;
+    border-radius: 10%;
+    align-self:center;
+    display:flexbox
+}
+
+h1{
+    color:white;
+    font-size: 40px;
+    text-align: center;
+    text-shadow: 1px 1px 2px black;
+}
+
+.container{
+    position: absolute;
+    margin-top:10%;
+    margin-left:30%;
+    display: block;
+}
+
+input{
+    width:400px;
+    margin-left: 10%;
+}
+
+footer{
+    margin-top:34vw;
+    background-color: lightgray;
+    padding-top: 80px;
+    padding-left: 300px;
+    display: flexbox;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+td, th{
+    text-align: center;
+    padding-right: 100px;
+    padding-left: 100px;
+}
+
