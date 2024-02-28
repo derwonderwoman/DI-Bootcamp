@@ -1,0 +1,62 @@
+ #icon{
+    width: 50px;
+    height:70px;
+    padding-left: 40px;
+    padding-top: 40px;
+    bottom: 15px;
+    position: relative;
+ }
+
+ body{
+    background-image: url(./assets/online-fashion-shopping-with-computer_23-2150400628.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    position: relative;
+ }
+
+ nav{
+    background-color: black;
+    height: auto;
+ }
+
+ #prod{
+    color: white;
+    display: inline;
+    font-size: 30px;
+    margin-left: 75%;
+    bottom: 40px;
+    bottom: 40px;
+    position: relative;
+ }
+
+ #foot{
+    font-size: 20px;
+    color:white;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+ }
+
+ footer{
+    position: fixed;
+    background-color: black;
+    bottom: 0;
+    left:0;
+    width:100%;
+ }
+
+ @media only screen and (max-width:600px){
+   div{
+      width:100%
+   }
+}
+
+@media only screen and (){
+   div {
+      width: 50%;
+      float: left;
+  }
+}

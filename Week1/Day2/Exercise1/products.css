@@ -1,0 +1,79 @@
+#icon{
+    width: 50px;
+    height:70px;
+    padding-left: 40px;
+    padding-top: 40px;
+    bottom: 15px;
+    position: relative;
+ }
+
+ body{
+    margin: 0;
+    padding:0;
+
+ }
+
+ nav{
+    background-color: black;
+    height: auto;
+ }
+
+img{
+    padding: 35px;
+}
+
+s{
+    color:grey;
+    font-size:20px ;
+}
+
+.price{
+    color: green;
+    font-size: 30px;
+}
+
+.name{
+    font-size: 25px;
+}
+
+button{
+    box-shadow: inset;
+    color:grey;
+    font-size:20px;
+    background-color: white;
+    padding: 15px 32px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#foot{
+    font-size: 20px;
+    color:white;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+ }
+
+ footer{
+    position: fixed;
+    background-color: black;
+    bottom: 0;
+    left:0;
+    width:100%;
+ }
+ .container{
+    position: relative;
+ }
+
+ .image{
+    position: absolute;
+    left:5%;
+    width: 50px;
+    height: 50px; 
+ }
+ .image2{
+    width: 100px;
+    height: 100px; 
+    position: absolute;
+    left:60%;
+ }
