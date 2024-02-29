@@ -14,15 +14,17 @@ body{
     flex-direction: column;
     padding-left: 30px;
     padding-top: 30px;
-    width: 300px;
+    width: fit-content;
     padding-bottom: 30px;
     padding-right: 30px;
-    height: 900px;
+    height: fit-content;
 }
 
 .right_container{
     display:grid;
-    grid-template-rows: 1fr 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    width: fit-content;
+    height: fit-content;
 }
 
 #main{
