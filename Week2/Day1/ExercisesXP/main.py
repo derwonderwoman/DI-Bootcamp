@@ -22,9 +22,18 @@ print(info)
 #exercise 6
 a = 20
 b = 4
-#exercise 7
 if(a > b):
     print("Hello World \n")
+
+#exercise 7
+
+a = input("Write a number")
+
+if a % 2 == 0:
+    print("It's even")
+else:
+    print("It's odd")
+
 #exercise 8
 name2 = "Kseniia"
 
