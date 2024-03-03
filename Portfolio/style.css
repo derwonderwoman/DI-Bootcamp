@@ -1,0 +1,20 @@
+.fluidImageOverlay{
+    background-color:rgba(89, 85, 81, 0.5);
+    color: rgb(89, 85, 81);
+    display: block;
+    font-family: brandon-grotesque;
+    font-size:18.8848px;
+    font-style: normal;
+    font-weight: 400;
+    height:808.609px;
+    left:0px;
+    letter-spacing: normal;
+    line-height: 30.2157px;
+    mix-blend-mode: normal;
+    overflow-wrap: break-word;
+    position: absolute;
+    text-size-adjust: 100%;
+    text-transform: none;
+    width: 600px;
+    -webkit-font-smoothing: antialiased;
+}
