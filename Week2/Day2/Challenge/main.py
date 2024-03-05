@@ -14,21 +14,18 @@ print(my_list)
 
 #exercise 2
 
-word = input("Write me a word")
-new_list = list(word)
+word = input("Write me a word ")
 new_word = []
+i = 0
 
-for i in new_list[:]:
-    if i in new_word:
-        new_list.remove(i)
-    else:
-        new_word.append(i)
+while i < len(word):
+    if i == len(word) - 1 or word[i] != word[i+1]:
+        new_word.append(word[i])
+    i += 1
 
 new_word = "".join(new_word)
 
 print(new_word)
-
-
 
 
 
