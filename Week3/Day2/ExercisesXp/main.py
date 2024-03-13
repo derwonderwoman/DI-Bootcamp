@@ -83,16 +83,10 @@ class Family():
         print("Congratulations! New family member was born")
 
     def is_18(self,the_name):
-        for i,member in enumerate(self.members): 
-            for key, value in self.members[i].items():
-                if value == the_name:
-                    age = self.members[i]["age"]
-                    if age >= 18:
-                        return True
-                        print ("This person is an adult")
-                    else:
-                        return False
-                        print ("This person is a child")
+        for member in self.members: 
+                if member["name"] == the_name:
+                    return member["age"] >=18
+                raise print ("This person is a child")
 
     def family_presentation(self):
         print(f"The {self.last_name}'s family:")   
