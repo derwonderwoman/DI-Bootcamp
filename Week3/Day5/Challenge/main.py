@@ -22,7 +22,7 @@ class Deck:
 
     def build(self):
         for s in ["Spades", "Hearts", "Clubs", "Diamonds"]:
-            for v in ["A",2,3,4,5,6,7,8,9,10,"J","Q","K"]:
+            for v in ["Ace",2,3,4,5,6,7,8,9,10,"Jack","Queen","King"]:
                 self.cards.append(Card(s,v))
 
 print("Dealing a single card from the deck:")

@@ -1,3 +1,6 @@
+import string
+import random
+
 #exercise 1
 
 list1 = [10, 11, 12, 13, 14] 
@@ -39,4 +42,59 @@ for number in numbers:
 print(f"The greatest number is {max}")
 
 #exercise 5
+
+vowels = 'aeiouAEIOU'
+alphabet = string.ascii_lowercase
+for i in alphabet:
+    if i in vowels:
+        print ("Vowels")
+    else:
+        print("Consonant")
+
+#exercise 6
+        
+words = list(input("Give me 7 words: ").lower().split())
+letter = input("Give me a letter")
+
+
+for w in words:
+    for i,let in enumerate(w):
+        flag = False
+        if let == letter:
+            print (f"First appearence of the letter variable is {i+1} ")
+            flag = True
+            break
+    if not flag:
+        print (f"Sorry, there is no letter '{letter}' in the word '{w}'")
+    
+
+#exercise 7:
+numbers = range(1, 1000001)
+min_num = min(numbers)
+max_num = max(numbers)
+sum = 0
+for num in numbers:
+    sum += num
+print(max_num)
+print(min_num)
+print (sum)
+
+#exercise 8
+numbers = "34,67,55,33,12,98"
+print(numbers.split(","))
+print(tuple(numbers.split(',')))
+
+
+#exercise 9
+user = input("Give m a number from 1 to 9(including) - ")
+rand = random.randint(1,9)
+found = False
+while found != True:
+    if int(user) == int(rand):
+        found = True
+        print ("Winner")    
+    else:
+        user = input("Give m a number from 1 to 9(including) - ")
+        print("Better luck next time")
+
 
