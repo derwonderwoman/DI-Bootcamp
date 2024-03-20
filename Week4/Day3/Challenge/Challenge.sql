@@ -106,7 +106,7 @@
 -- FROM Library AS l
 -- INNER JOIN Student AS s ON l.student_id = s.student_id
 -- INNER JOIN Book AS b ON l.book_fk_id = b.book_id
--- WHERE b.title = 'Alice in Wonderland';
+-- WHERE b.title = 'Alice In Wonderland';
 
 -- DELETE FROM Student
 -- WHERE student_id = 1;
