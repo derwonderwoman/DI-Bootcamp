@@ -1,0 +1,25 @@
+-- SELECT name FROM language
+-- SELECT film.title, film.description, language.name FROM film INNER JOIN language ON film.language_id = language.language_id
+-- SELECT language.name,  film.title, film.description FROM film RIGHT OUTER JOIN language ON film.language_id = language.language_id
+-- CREATE TABLE new_table (
+-- 	film_id INT PRIMARY KEY, 
+-- 	name VARCHAR(50)
+-- )
+-- INSERT INTO new_table(film_id, name)
+-- VALUES(1,'Interstellar'),(2, 'House of Dragons'),(3, 'Game of Thrones')
+-- CREATE TABLE customer_review (
+-- 	review_id SERIAL PRIMARY KEY, 
+-- 	film_id INT NOT NULL,
+-- 	language_id INT NOT NULL,
+-- 	title VARCHAR(100),
+-- 	score INT CHECK (score >= 1 AND score <= 10),
+-- 	review_text VARCHAR,
+-- 	last_update DATE,
+-- 	FOREIGN KEY (film_id) REFERENCES new_table(film_id) ON DELETE CASCADE,
+-- 	FOREIGN KEY (language_id) REFERENCES language(language_id)
+-- )
+-- INSERT INTO customer_review(film_id,language_id, title,score,review_text,last_update)
+-- VALUES (1, 1, 'Great Movie', 9, 'This movie was fantastic!', '2024-03-17'),
+--     (2, 2, 'Disappointing', 4, 'I expected more from this movie.', '2024-03-17')
+-- DELETE FROM new_table WHERE film_id = 1
+-- SELECT * FROM customer_review
