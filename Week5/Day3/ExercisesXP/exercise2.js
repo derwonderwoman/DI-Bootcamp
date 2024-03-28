@@ -5,8 +5,7 @@ let input1 = document.getElementById("fname")
 console.log(input1)
 let input2 = document.getElementById("lname")
 console.log(input2)
-let input3 = document.getElementById("submit")
-console.log(input3)
+
 
 let input_name1 = document.getElementsByName("firstname")[0]
 console.log(input_name1)
