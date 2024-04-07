@@ -13,7 +13,7 @@
     max-width: 20%;
 }
 
-main{
+body{
     background-color: rgb(119, 91, 175);
     background-image:url(assets/card-pattern.png);
 }

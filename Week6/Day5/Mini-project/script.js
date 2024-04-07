@@ -85,22 +85,34 @@ const robots = [
     }
     ];
 
-    for (const robot of robots) {
-      const html = `
-          <div class='bg-success p-2 text bg-opacity-75 card m-3'>
-              <img class='rounded-circle' alt='' src='${robot.image}'/>
-              <p class='h3'>${robot.name}</p>
-              <p class='h4'>${robot.email}</p>  
-          </div>
-      `;
-      const div = document.createElement("div");
-      div.classList.add("bg-success", "text", "card", "m-3", "max-width-20");
-      document.getElementById('container').insertAdjacentHTML('beforeend', html);
-    }
-
-    document.getElementById("search-box").addEventListener("keyup",findRobot);
-
+    function displayRobots(robots) {
+      const container = document.getElementById("container");
+      for (const robot of robots) {
+          const html = `
+              <div class='bg-success p-2 text bg-opacity-75 card m-3'>
+                  <img class='rounded-circle' alt='' src='${robot.image}'/>
+                  <p class='h3'>${robot.name}</p>
+                  <p class='h4'>${robot.email}</p>  
+              </div>
+          `;
+          const div = document.createElement("div");
+          div.classList.add("bg-success", "text", "card", "m-3", "max-width-20");
+          div.innerHTML = html;
+          container.appendChild(div);
+      }
+  }
+    
     function findRobot(event){
-      event.preventDefault;
-      
+      event.preventDefault();
+      const {value} = event.target;
+      const newList = robots.filter((robot) => robot.name.toLowerCase().includes(value.toLowerCase()));
+      erasePage();
+      displayRobots(newList);
     }
+
+    function erasePage(){
+      document.getElementById("container").innerHTML = "";
+    }
+
+    displayRobots(robots);
+    document.getElementById("search-box").addEventListener("keyup",findRobot);
