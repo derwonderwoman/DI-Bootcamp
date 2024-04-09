@@ -1,0 +1,79 @@
+@import url('https://fonts.cdnfonts.com/css/star-wars');
+
+body {
+    background-color: black;
+  
+    background-image: url("https://i.giphy.com/media/TxVVB6PfWMjE4/200.webp");
+  
+    font-family:'Star Wars', 'sans-serif';
+    font-size: 150px;
+    color: yellow;
+    text-align: center;
+  }
+
+  .wrapper{
+    border: 3px solid yellow;
+    border-radius: 10px;
+
+    width: 600px;
+    height: 250px;
+
+    margin: auto;
+  }
+  
+  p{
+    margin: 20px;
+  }
+
+  button{
+    border: 3px solid yellow;
+    border-radius: 10px;
+
+    width: 200px;
+    height: 40px;
+
+    font-weight: bold;
+	font-size: 20px;
+
+	cursor: pointer;
+  }
+
+  #name{
+	color: white;
+    font-family:Arial, Helvetica, sans-serif;
+
+	font-size: 30px;
+	
+}
+
+#height{
+	color: white;
+    font-family:Arial, Helvetica, sans-serif;
+
+	font-size: 20px;
+}
+
+#gender{
+	color: white;
+	font-family:Arial, Helvetica, sans-serif;
+
+	font-size: 20px;
+}
+
+#birth-year{
+	color: white;
+	font-family:Arial, Helvetica, sans-serif;
+
+	font-size: 20px;
+}
+
+#home-world{
+	color: white;
+	font-family:Arial, Helvetica, sans-serif;
+
+	font-size: 20px;
+}
+
+
+
+

@@ -15,7 +15,7 @@ const handleSubmit = (e) => {
           let data = await res.json()
           
           if(data.data.length === 0) {
-              throw new Error('Your request did not find any giphs')
+              throw new Error('error')
           } else {
               appendToDom(data)
           }
