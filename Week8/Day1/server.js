@@ -3,6 +3,9 @@ const { products } = require("./config/data.js");
 
 const app = express();
 
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 app.listen(3001, () => {
   console.log("run on 3001");
 });
@@ -14,6 +17,46 @@ app.listen(3001, () => {
  * app.delete - DELETE delete data
  * app.put - PUT modify data
  */
+
+app.delete("/api/products/:id", (req, res) => {
+  const { id } = req.params;
+  const index = products.findIndex((item) => item.id == id);
+  if (index === -1) {
+    return res.status(404).json({ msg: "not found" });
+  }
+  products.splice(index, 1);
+  res.json(products);
+});
+
+/** Update - PUT - modify a product
+ * id -> params
+ * data -> name, price -> json in body
+ *
+ */
+app.put("/api/products/:id", (req, res) => {
+  const { id } = req.params;
+  const { name, price } = req.body;
+  const index = products.findIndex((item) => item.id == id);
+
+  if (index === -1) {
+    return res.status(404).json({ msg: "not found" });
+  }
+
+  products[index] = {
+    ...products[index],
+    name,
+    price,
+  };
+
+  res.json(products);
+});
+
+/** Create - POST - to create a new product */
+app.post("/api/products", (req, res) => {
+  console.log(req.body);
+  products.push(req.body);
+  res.json(products);
+});
 
 /** Read - get - get all products */
 app.get("/api/products", (req, res) => {
