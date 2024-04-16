@@ -1,6 +1,7 @@
 {
-  "name": "exercise3",
+  "name": "challenge",
   "version": "1.0.0",
+  "description": "",
   "main": "app.js",
   "type": "module",
   "scripts": {
@@ -11,6 +12,5 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.19.2"
-  },
-  "description": ""
+  }
 }
