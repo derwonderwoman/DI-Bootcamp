@@ -33,7 +33,7 @@ app.get("/posts", (req, res) => {
 app.get("/posts/:id", (req, res) => {
     const { id } = req.params
     const blog_post = blog_posts.find((element) => element.id == id )
-    if (!product) {
+    if (!blog_post) {
         return res.sendStatus(404);
       }
     res.status(200).json(blog_post);
