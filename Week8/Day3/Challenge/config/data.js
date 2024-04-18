@@ -1,13 +1,15 @@
-import knex from "knex";
-import dotenv from "dotenv";
-dotenv.config();
+const knex = require('knex')
+require('dotenv').config()
 
-const connection_string = process.env.CONNECTION_STRING;
+const { CONNECTION_STRING } = process.env
 
-export const db = knex({
-    client:'pg',
-    connection:{
-        connectionString:connection_string,
+const db = knex({
+    client: 'pg',
+    connection: {
+        connectionString: CONNECTION_STRING,
         ssl:{rejectUnauthorized:false}
-    },
-});
+}});
+
+module.exports = {
+    db
+}

@@ -1,13 +1,14 @@
-import express from "express";
-import routes from './routes/reg.routes.js';
+const express = require('express');
+const app = express()
+const ejs = require('ejs'); 
+const router = require("./routes/reg.routes.js")
 
-const app = express();
+app.set('view engine', 'ejs')
+app.use(express.urlencoded({ extended: true }))
+app.use(express.json())
 
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+app.use(router)
 
-app.use('/', routes);
-
-  app.listen(5000, () => {
-    console.log(`Server 5000 is running`);
-  });
+app.listen(3002, () => {
+        console.log('running on 3002')
+})

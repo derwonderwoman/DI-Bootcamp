@@ -1,19 +1,19 @@
-import express from "express";
+const express = require('express')
 
-import {
-  getAllUsers,
-  getUserById,
-  updateUser,
-  registerUser,
-  loginUser
-} from "../controllers/reg.control.js";
+const { getAllUsers, getUserById, createUser, updateUser, loginUser } = require('../controllers/reg.control.js')
 
-const router = express.Router();
+const router = express.Router()
 
-router.get("/users", getAllUsers);
-router.get("/users/:id", getUserById);
-router.put("/users/:id", updateUser);
-router.post("/register", registerUser);
-router.post("/login", loginUser);
+router.get('/users', getAllUsers)
+// router.get('/users/:id', getUserById) 
+// router.get('/login',(req, res) => {
+//     res.render("login", { message: ''})
+// })
+// router.post('/login', loginUser)
+// router.get('/register',(req, res) => {
+//     res.render("register", { error: '', user_exists: '', success: ''})
+// })
+// router.post('/register', createUser)
+// router.put('/users/:id', updateUser)
 
-export default router;
+module.exports = router
