@@ -1,0 +1,53 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  
+}
+
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+#inputForm{
+  background-color: burlywood;
+  margin:0;
+  
+}
+h1 {
+  color:white !important;
+  background-color:rgb(59, 54, 54);
+  padding:10px;
+  margin:0
+}
+
+.entered-info{
+  background-color: rgb(30, 85, 85);
+  color:white;
+}
+.entered-info h2{
+  margin:10px;
+  padding:10px;
+  font-weight: 650;
+}
+.entered-info p{
+  font-size: 18px;
+  margin-left:20px;
+  font-style: oblique
+}
