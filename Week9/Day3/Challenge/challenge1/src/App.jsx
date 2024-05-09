@@ -13,7 +13,16 @@ function App(props) {
   const[VeganDiet,setVeganDiet] = useState('No');
 
   const handleSubmit = (event) => {
+    event.preventDefault();
     console.log('Submitted:', { firstName, lastName, age, gender, destination, NutsDiet, LactoseDiet, VeganDiet });
+    setFirstName(""),
+    setLastName(""),
+    setAge(""),
+    setDestination(""),
+    setGender(""),
+    setNutsDiet("No"),
+    setLactoseDiet("No"),
+    setVeganDiet("No")
   };
 
   return (
