@@ -39,7 +39,7 @@ const Add = () => {
                         onClick = {()=>taskCompleted(item.id)}>
                         {item.task}
                     </span>
-                    <TaskRemove id={item.id}/>
+                        <button onClick={() => remove(item.id)}>Remove task</button>
                     </div>
             })}
             </div>
