@@ -1,13 +1,24 @@
 import { createSelector } from '@reduxjs/toolkit';
-import { tasks } from './slice';
+import { useSelector } from 'react-redux';
+import { tasks,category } from './slice';
 
-// export const selectTasksByCategorie = (state, categorie) => createSelector(
-//   [tasks],
-//   tasks => {
-//     if (categorie === 'All') return tasks;
-//     return tasks.filter(task => task.categorie === categorie);
-//   }
-// )(state);
+export const selectTasksByCategorie = createSelector([tasks], (tasks)=> {
+  const uniqueCategories = new Set();
+  tasks.forEach(task => uniqueCategories.add(task.categorie));
+  return Array.from(uniqueCategories);
+}
+);
+
+export const useSelectedCategories = () => {
+  const selectCategories = createSelector(
+    [tasks, category],
+    (tasks, category) => {
+      return tasks.filter(task => task.categorie === category);
+    }
+  );
+  return useSelector(selectCategories)
+}
+
 
 export const selectTasksByCompletion = createSelector(
   [tasks],

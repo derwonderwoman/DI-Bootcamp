@@ -1,10 +1,11 @@
 import { useSelector, useDispatch } from "react-redux";
-import { useRef, useState } from "react";
-import { add, remove, toggle, edit } from "../app/slice";
+import { useRef, useState, useEffect } from "react";
+import { add, remove, toggle, edit, setCat, tasks, category } from "../app/slice";
 import "./tasks.css";
-import { selectTasksByCompletion } from "../app/hooks";
+import { selectTasksByCompletion, selectTasksByCategorie, useSelectedCategories } from "../app/hooks";
 
 const TaskList = () => {
+  // const [selectedCategorie, setSelectedCategorie] = useState();
   const [filter, setFilter] = useState('all'); 
   const addRef = useRef("");
   const addCat = useRef("");
@@ -13,6 +14,13 @@ const TaskList = () => {
   const [newTaskName, setNewTaskName] = useState("");
   const [newCategorie, setNewCategorie] = useState("");
   const { all, completed, notCompleted } = useSelector(selectTasksByCompletion);
+  const categories = useSelector(selectTasksByCategorie);
+  const filteredTasks = useSelectedCategories()
+  const selectedCategorie = useSelector(category)
+
+  // useEffect(()=>{
+  //   if(selectedCategorie) filteredTasks()
+  // },[selectedCategorie])
 
   const handleEditTask = () => {
     if (newTaskName.trim() !== "") {
@@ -42,6 +50,11 @@ const TaskList = () => {
   const tasksToShow = filter === 'completed' ? completed :
                       filter === 'active' ? notCompleted :
                       all;
+
+  const handleCatChange = (categorie) => {
+    dispatch(setCat(categorie));
+    setSelectedCategorie(categorie);
+  };
 
   return (
     <>
@@ -87,6 +100,15 @@ const TaskList = () => {
               )}
             </div>
           ))}
+          <p>Filter your tasks by category...</p>
+          <select value={selectedCategorie} onChange={(e) => dispatch(setCat(e.target.value))}>
+            {categories.map(categorie => (
+              <option key={categorie.id} value={categorie}>{categorie}</option>
+            ))}
+          </select>
+            {filteredTasks.map(task => (
+              <div key={task.id}>{task.name}</div>
+            ))}
         </div>
         </div>
       </div>
