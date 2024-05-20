@@ -1,5 +1,5 @@
 {
-  "name": "app-app",
+  "name": "age_counter",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,10 +11,9 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.5",
-    "react": "^18.2.0",
+    "react": "^18.3.1",
     "react-dom": "^18.2.0",
-    "react-redux": "^9.1.2",
-    "redux": "^5.0.1"
+    "react-redux": "^9.1.2"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
