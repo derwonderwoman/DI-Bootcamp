@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/868a520acf.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <form>
-        <input type="text" id="name" name="New_product" placeholder="new task"><br>
-        <input type="submit" value="Add" id="submit" >
+    <h1>TO DO LIST</h1>
+    <form id = "form">
+        <input type="text" id="name" name="task" placeholder="new task">
+        <input type = "submit" id="button" value="ADD">
     </form>
-    <div class="listTasks"></div>
+    <ul style="list-style: none;" id="listTasks"></ul>
     <script src="challenge.js"></script>
 </body>
 </html>

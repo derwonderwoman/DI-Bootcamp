@@ -1,3 +1,40 @@
 body{
     background-color: red;
 }
+
+form{
+    text-align: center;
+}
+
+#button{
+    background-color: white;
+    color:blue;
+    border-color: white;
+    height: 60px;
+    width: 60px;
+}
+
+#name {
+    background-color: white;
+    height: 50px;
+    width: 500px;
+}
+
+li {
+    display:flexbox;
+    text-align: center;
+    font-size: 30px;
+    margin-right: 10px;
+
+}
+
+ul {
+    display: flexbox;
+    
+}
+
+h1 {
+    text-align: center;
+    font-size: 60px;
+    color: white;
+}
