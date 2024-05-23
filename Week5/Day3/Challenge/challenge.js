@@ -1,22 +1,28 @@
-let libform = document.querySelector('#libform')
 
-libform.addEventListener('submit',getValue)
+function getValue(inputId) {
+    const inputElement = document.getElementById(inputId);
+    if (inputElement) {
+      return inputElement.value.trim();
+    } else {
+      console.error(`Input field with ID ${inputId} not found`);
+      return ''
+    }
+  }
 
-function getValue(e){
-    e.preventDefault();
-    libform.forEach(element => {
-        if (element !== null){
-        return element.nodeValue()
-        }
-        getStory()
-    });
+function getStory(event){
+    event.preventDefault();
+    const noun = getValue('noun');
+    const verb = getValue('verb');
+    const adjective = getValue('adjective');
+    const name = getValue('person');
+    const place = getValue('place');
+
+    const story = `The ${adjective} ${noun} ${verb} with ${name} to ${place}.`;
+    console.log(story);
+
+    const storyContainer = document.getElementById('story');
+    storyContainer.textContent = story;
 }
 
-function getStory(){
-
-}
-// Get the value of each of the inputs in the HTML file when the form is submitted. Remember the event.preventDefault()
-// Make sure the values are not empty
-// Write a story that uses each of the values.
-// Make sure you check the console for errors when playing the game.
-// Bonus: Add a “shuffle” button to the HTML file, when clicked the button should change the story currently displayed (but keep the values entered by the user). The user could click the button at least three times and get a new story. Display the stories randomly.
+const libButton = document.getElementById('lib-button');
+libButton.addEventListener('click', getStory);
