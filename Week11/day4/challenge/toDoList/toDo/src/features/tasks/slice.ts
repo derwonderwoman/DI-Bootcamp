@@ -40,12 +40,19 @@ export const tasksSlice = createSlice({
         },
         active: (state,action:PayloadAction<EnumActiveState>) => {
             state.filter = action.payload;
+        },
+        edit: (state, action: PayloadAction<{ id: string, newText: string }>) => {
+            const { id, newText } = action.payload;
+            const taskToEdit = state.tasks.find((item) => item.id === id);
+            if (taskToEdit) {
+                taskToEdit.item = newText;
+            }
         }
      },
 
 })
 
-export const {add, clear, check, remove, active } = tasksSlice.actions
+export const {add, clear, check, remove, active, edit } = tasksSlice.actions
 
 export const tasksState = (state: StoreStateType) => state.tasksReducer.tasks;
 export const filterState = (state:StoreStateType) => state.tasksReducer.filter;

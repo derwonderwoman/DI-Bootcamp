@@ -10,6 +10,7 @@ import {
   EnumActiveState,
   tasksState,
   filterState,
+  edit
 } from "./slice";
 
 // get all tasks by filter
@@ -93,6 +94,17 @@ export const useClearTasks = () => {
     dispatch(clear());
   }, [dispatch]);
 };
+
+export const useEditTasks = () =>{
+  const dispatch = useAppDispatch();
+  return useCallback(
+    (id: string, newText: string) => {
+      dispatch(edit({id, newText}));
+    },
+    [dispatch]
+  );
+}
+
 
 
 
