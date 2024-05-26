@@ -6,23 +6,17 @@ function isAnagram(string1,string2){
     }
     const total1 = {};
     const total2 = {};
-    for (const letter in string1){
-        if(total1[letter] !== null){
-            total1[letter] ++;
-        }
-        else {
-            total1[letter] = 1;
-        }
+    for (const letter of str1){
+        if(total1[letter] !== 0){
+            total1[letter] = (total1[letter] || 0) + 1;
     }
+}
+    console.log(total1);
 
-    for (const letter in string2){
-        if(total2[letter] !== null){
-            total2[letter] ++;
-        }
-        else {
-            total2[letter] = 1;
-        }
+    for (const letter of str2){
+        total2[letter] = (total2[letter] || 0) + 1;
     }
+    console.log(total2);
 
     for(const key in total1){
         if(total1[key] !== total2[key]){
@@ -32,5 +26,5 @@ function isAnagram(string1,string2){
     return true;
 }
 
-const result = isAnagram("low","owl");
+const result = isAnagram("Astronomer","Moon starer");
 console.log(result);
